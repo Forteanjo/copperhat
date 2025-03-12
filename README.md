@@ -1,5 +1,11 @@
 # CopperHat: A Mesmerizing 3D Point Cloud Visualization
 
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Kotlin](https://img.shields.io/badge/Kotlin-2.0.21-blue.svg)](https://kotlinlang.org/)
+[![Compose](https://img.shields.io/badge/Compose-1.5.4-blue.svg)](https://developer.android.com/jetpack/compose)
+[![API](https://img.shields.io/badge/API-26%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=26)
+
+
 **CopperHat** is an Android application that showcases a visually captivating 3D point cloud visualization, rendered dynamically using Jetpack Compose's `Canvas` API. This project demonstrates how to leverage mathematical functions and modern Android development practices to create unique and interactive graphics within your apps.
 
 ## Features
@@ -66,22 +72,38 @@ The `CopperHat` composable function is the core of the visualization. Here's a h
 
 ## Project Structure
     Copper_Hat/ 
-    ├── app/ │ 
-             └── src/ │ 
-                      └── main/ │ 
-                                ├── kotlin/ │ │ 
-                                            └── sco/ │ │ 
-                                                     └── carlukesoftware/ │ │ 
-                                                                          └── copperhat/ │ │    
-                                                                                         ├── MainActivity.kt # Entry point of the app │ │ 
-
-    └── ui/ │ │ 
-            └── components/ │ │ 
-                            └── CopperHat.kt # The CopperHat Composable │ │ 
-                                                                        └── theme/ │ │ 
-                                                                                   └── ... # Compose theming │ 
-    └── res/ # Resources │ └── AndroidManifest.xml # App Manifest │ └── ... # other files ├── build.gradle.kts └── ...
-
+    ├── app/ 
+    │ 
+    └── src/ 
+        │ 
+        └── main/ 
+            │ 
+            ├── kotlin/ 
+            │   │ 
+                └── sco/ 
+            │       │ 
+                    └── carlukesoftware/ 
+            │           │ 
+                        └── copperhat/ 
+            │               │    
+                            ├── MainActivity.kt # Entry point of the app 
+            │               │
+                            └── ui/ 
+            │                   │ 
+                                └── components/ 
+            │                       │ 
+                                    └── CopperHat.kt # The CopperHat Composable 
+            │                   │ 
+                                └── theme/ 
+            │                       │ 
+                                    └── ... # Compose theming 
+    │ 
+    └── res/ # Resources 
+        │ 
+        └── AndroidManifest.xml # App Manifest 
+    │       └── ... # other files 
+    ├── build.gradle.kts 
+    └── ...
 
 **Enjoy exploring the fascinating world of 3D graphics with Jetpack Compose!**
 
@@ -99,4 +121,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Donald McCaskey - [forteanjo@sky.com](mailto:forteanjo@sky.com)
 
-Project Link: [https://github.com/forteanjo/battery_information](https://github.com/forteanjo/battery_information)
+Project Link: [https://github.com/forteanjo/copperhat](https://github.com/forteanjo/copperhat)
