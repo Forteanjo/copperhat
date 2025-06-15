@@ -15,9 +15,23 @@ import sco.carlukesoftware.copperhat.ui.theme.CopperHatTheme
 import kotlin.math.cos
 import kotlin.math.sin
 
+/**
+ * A Composable function that draws a spiral pattern on a Canvas.
+ *
+ * The spiral is drawn by iteratively calculating points along the curve
+ * using polar coordinates (radius `r` and angle `theta`).
+ * The radius and angle are incremented in a loop until the radius
+ * reaches a predefined limit.
+ *
+ * The Canvas is set to a fixed width of 680.dp and height of 220.dp
+ * with a black background. The spiral itself is drawn in white.
+ *
+ * @param modifier Modifier to be applied to the Canvas.
+ */
 @Composable
 fun Spiral(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    spiralStep: Float = 0.08f
 ) {
     Canvas(
         modifier = modifier
@@ -26,27 +40,29 @@ fun Spiral(
             .background(Color.Black)
     ) {
         val xc = size.width / 2f
-        val yx = size.height / 2f
+        val yc = size.height / 2f
 
         var r = 0f
         var theta = 0f
-        var c = 0f
+
+        val points = mutableListOf<Offset>()
 
         while (r < 239f) {
             val x = xc + r * cos(theta)
-            val y = yx + r * sin(theta)
+            val y = yc + r * sin(theta)
+            points.add(Offset(x, y))
 
-            drawPoints(
-                points = listOf(Offset(x, y)),
-                pointMode = PointMode.Points,
-                color = Color.White,
-                strokeWidth = 1f
-            )
-
-            c += 0.01f
-            r += 0.01f
-            theta = c
+            r += spiralStep
+            theta = r
         }
+
+        drawPoints(
+            points = points,
+            pointMode = PointMode.Points,
+            color = Color.White,
+            strokeWidth = 2f
+        )
+
     }
 }
 
