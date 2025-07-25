@@ -27,7 +27,10 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             CopperHatTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                Scaffold(
+                    modifier = Modifier
+                        .fillMaxSize())
+                { innerPadding ->
                     Column(
                         modifier = Modifier
                             .padding(innerPadding)
@@ -42,19 +45,19 @@ class MainActivity : ComponentActivity() {
                             zoomFactor = 2f
                         )
 
-                        Spacer(
-                            modifier = Modifier
-                                .height(16.dp)
-                                .weight(1f)
-                        )
-
-                        FedoraHat(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .fillMaxHeight(fraction = 1/3f)
-                                .weight(1f),
-                            zoomFactor = 1f
-                        )
+//                        Spacer(
+//                            modifier = Modifier
+//                                .height(16.dp)
+//                                .weight(1f)
+//                        )
+//
+//                        FedoraHat(
+//                            modifier = Modifier
+//                                .fillMaxWidth()
+//                                .fillMaxHeight(fraction = 1/3f)
+//                                .weight(1f),
+//                            zoomFactor = 1f
+//                        )
 
                     }
                 }
