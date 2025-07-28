@@ -1,7 +1,5 @@
 package sco.carlukesoftware.copperhat.ui.components
 
-import android.R.attr.x
-import android.R.attr.y
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.height
